@@ -44,9 +44,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## inverse matrix. If the inverse matrix is not found in cache then the function
 ## calculate it and insert the cache
 cacheSolve <- function(x, ...) {
-  ## Return a matrix that is the inverse of 'x'
-  
   inverse <- x$getInverseMatrix()
+
   if (is.null(inverse)) {
     message("Inverse matrix not found, calculating...")
     matrix <- x$getMatrix()
